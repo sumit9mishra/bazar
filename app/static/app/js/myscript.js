@@ -7,17 +7,20 @@ $('#slider1, #slider2, #slider3,#slider4').owlCarousel({
             items: 1,
             nav: false,
             autoplay: true,
+            autoplayTimeout: 2000,
         },
         600: {
             items: 3,
             nav: true,
             autoplay: true,
+            autoplayTimeout: 2000,
         },
         1000: {
             items: 5,
             nav: true,
             loop: true,
             autoplay: true,
+            autoplayTimeout: 2000,
         }
     }
 })

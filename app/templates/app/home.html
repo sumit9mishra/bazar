@@ -92,6 +92,24 @@
 </div>
 <!-- End 3nd Product Slider -->
 
+<!-- slider 4  -->
+
+<div class="mx-3">
+  <h2>Laptop</h2>
+  <!-- Slider 2 -->
+  <div class="owl-carousel" id="slider4">
+    {% for l in laptopes %}
+    <a href="{% url 'product-detail' l.id %}" class="btn">
+      <div class="item"><img src="{{l.product_image.url}}" alt="" height="200px"><span
+          class="fw-bold">{{l.title}}</span><br><span class="fs-5">Rs. {{l.discounted_price}} ID:{{l.id}}</span></div>
+    </a>
+    {% endfor %}
+
+  </div>
+</div>
+
+<!-- end of slider4 -->
+
 <!-- Payment Info Section -->
 <div class="container my-5">
   <div class="row">

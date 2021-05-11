@@ -1,27 +1,30 @@
 {% extends 'app/base.html' %}
 {% load static %}
-{% block title %}Mobile{% endblock title %}
+{% block title %}Bottom Wear{% endblock title %}
 {% block main-content %}
 <div class="container my-5">
     <div class="row">
         <div class="col-sm-3">
             <div class="list-group">
-                <a href="{% url 'mobile' %}" class="list-group-item list-group-item-action" aria-current="true">All
-                    Mobile</a>
-                <a href="{% url 'mobiledata' 'Redmi' %}" class="list-group-item list-group-item-action"
-                    aria-current="true">Redmi</a>
-                <a href="{% url 'mobiledata' 'Realme' %}" class="list-group-item list-group-item-action"
-                    aria-current="true">Realme</a>
-                <a href="{% url 'mobiledata' 'below' %}" class="list-group-item list-group-item-action"
-                    aria-current="true">Below 10000</a>
-                <a href="{% url 'mobiledata' 'above' %}" class="list-group-item list-group-item-action"
-                    aria-current="true">Above 10000</a>
+                <a href="{% url 'bottomwear' %}" class="list-group-item list-group-item-action" aria-current="true">Bottom Wear</a>
+                    
+
+                <a href="{% url 'bottomweardata' 'levis' %}" class="list-group-item list-group-item-action"
+                    aria-current="true">Levis</a>
+                <a href="{% url 'bottomweardata' 'pepe' %}" class="list-group-item list-group-item-action"
+                    aria-current="true">Pepe</a>
+                <a href="{% url 'bottomweardata' 'below' %}" class="list-group-item list-group-item-action"
+                    aria-current="true">Below
+                    600</a>
+                <a href="{% url 'bottomweardata' 'above' %}" class="list-group-item list-group-item-action"
+                    aria-current="true">Above
+                    600</a>
             </div>
 
         </div>
         <div class="col-sm-8">
             <div class="row">
-                {% for product in mobiles %}
+                {% for product in bottomwear %}
                 <div class="col-sm-4 text-center mb-4">
                     <a href="{% url 'product-detail' product.id%}" class="btn">
                         <div class="item">
@@ -35,8 +38,8 @@
                 {% endfor %}
 
             </div>
-
         </div>
     </div>
 </div>
+
 {% endblock main-content %}
